@@ -27,7 +27,7 @@ def fb_json(fb_id):
 
 if __name__ == '__main__':
 	# Standard socket stuff:
-	host = 'localhost' # do we need socket.gethostname() ?
+	host = '192.168.1.101' # do we need socket.gethostname() ?
 	port = 8085
 	sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	sock.bind((host, port))
@@ -44,12 +44,12 @@ if __name__ == '__main__':
 	    match = re.match('GET /move\?a=(\d+)\sHTTP/1', req)
 	    if match:
 		angle = match.group(1)
-		print "ANGLE: " + angle + "\n"
+		print "ANGLE: " + angle + ""
 		csock.sendall(head()+template())
 	    else:
 
 		print "Returning 404"
-		csock.sendall("HTTP/1.0 404 Not Found\r\n")
+		csock.sendall("HTTP/1.0 404 Not Found\r\n\n 404 Page Not Found!")
 	    csock.close()
 
 
