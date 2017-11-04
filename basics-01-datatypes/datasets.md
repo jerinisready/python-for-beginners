@@ -268,7 +268,7 @@ print mydict
 ### If feels interesting; check out, an immutable object inside mutable object or vice versa are modfyable
 
 ###### STRING
-a = "Hello" + " " + "World!" + " " + " The crazzy fox " + "quicklly jumped over " + " llazy Dogs! "
+```a = "Hello" + " " + "World!" + " " + " The crazzy fox " + "quicklly jumped over " + " llazy Dogs! "
 print(a)
 "wor" in a
 "acb" not in a
@@ -290,41 +290,42 @@ print a. islower()
 print a.upper()
 print a.lower()
 print a.title()
-
+```
 
 ###### PYTHON BUILTIN USEFUL FUNCTION FOR UNIQUE HANDLING
 >Lambda, filter, reduce and map
 
 
 ###### LAMBDA
-sub = lambda x,y: x-y if x > y else y-x
+```sub = lambda x,y: x-y if x > y else y-x
 
 print sub(5,3)
+```
 equivalent to :
 
-def sum(x,y)
+```def sum(x,y)
     if x > y:
         return x-y
     else:
         return y-x
-
+```
 
 ###### MAP - if we want to do a perticular function to all elements in the iterative list
 > result_list = map( function, list )
 
-def fahrenheit(T):
-    return ((float(9)/5)*T + 32)
+```def fahrenheit(T):
+    return ((float(9)/5) * T + 32)
 
 temperatures = (36.5, 37, 37.5, 38, 39)
 F = map(fahrenheit, temperatures)
 
 print F
-
+```
 
 ###### FILTER - if we want to do create a new list with elements which satisfy a particular condition
 > result_list = filter( function, list )
 
-ages = 24,18,17,42,23,10,5,16,9,40    
+```ages = 24,18,17,42,23,10,5,16,9,40    
 youth = filter(lambda x : 18< x and x <36, ages)
 print youth
 
@@ -334,3 +335,4 @@ external_marks = (19,23,72,94,68)
 extra_marks = (2,5,4,3,3)
 
 passed = filter(lambda x, y, z : (x + y + z) > 45, internal_marks, external_marks, extra_marks )
+```
