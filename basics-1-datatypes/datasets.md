@@ -3,87 +3,114 @@
 1. List Touple Set Dict String - and manipulating functions
 
 ###### PRINT
-print "Hello, Python"
-
+``` print "Hello, Python
+```
 ###### INITIALIZATION
-
-a = 10      # int()
-b = '10'    # str()
-c = []      # list()
-d = {}      # set()
-e = ()      # touple()
-f = a,b,c, b>c      # set()
-
-print a == b
-
-a = b = 10 
-print a == b
-
-a = 10
-b = 10
-print a == b #Reason
-
-
-sum = a + b
-print sum
-diff = a - b
-diff sum
-product = a * b
-print product
-quotient = a//b
-print quotient
-desimal = a/b
-print desimal
-remainder = a % b
-print remainder
+``` a = 10
+```
+ # int()
+```b = '10'
+```
+# str()
+```c = []
+```
+      # list()
+```d = {}
+  ```
+        # set()
+```e = ()
+```
+      # touple()
+```f = a,b,c, b>c
+```
+     # set()
+```print a == b
+```
 
 
-a = 100
-b = 43
-a += b
-print a
-a -= b
-print a
-a *= b
-print a
-a /= b
-print a
-a %= b
-print a
+```a = b = 10
+```
+```print a == b
+```
+
+```a = 10
+```
+```b = 10
+```
+```print a == b
+```
+    #Reason
+
+
+
+```sum = a + b ```
+```print sum ```
+```diff = a - b ```
+```diff sum ```
+```product = a * b ```
+```print product ```
+```quotient = a//b ```
+```print quotient```
+```desimal = a/b```
+```print desimal```
+```remainder = a % b```
+```print remainder```
+
+
+```a = 100```
+```b = 43```
+```a += b```
+```print a```
+```a -= b```
+```print a```
+```a *= b```
+```print a```
+```a /= b```
+```print a```
+```a %= b```
+```print a```
 
 
 
 
 ##### '\' as Escape Charector
 ###### FIND THE OUTPUT!
-print(" Did you know that 'word' is a word?")
-print('Did you know that " word " is a word?')
-print(' Did you know that \'word\' is a word?')
-print(" Did you know that \"word\" is a word ?")
+```print(" Did you know that 'word' is a word?")```
+```print('Did you know that " word " is a word?')```
+```print(' Did you know that \'word\' is a word?')```
+```print(" Did you know that \"word\" is a word ?")```
 
-print('A\nB\nC')
-print('D\tE\tF')
-print('W X\b Y Z')         # so what if we want to print a '\'?
-print('I just wanna try how to print a \\ ?')
 
-print " \n ", " \t ", " \" ", " \' ", " \\ ", " \/ ", " \b ", " \d ", " \D ", " \w ", " \W "
+```print('A\nB\nC')````
+```print('D\tE\tF')```
+```print('W X\b Y Z')
+```
+        # so what if we want to print a '\'?
+```print('I just wanna try how to print a \\ ?') ```
+```print " \n ", " \t ", " \" ", " \' ", " \\ ", " \/ ", " \b ", " \d ", " \D ", " \w ", " \W "
+```
 
 
 ###### Format String
 
-print "His name is %s and his age is %d! he paid Rs. %.4f \/-" % ('Arun', 28, 256.2932384 )
+```print "His name is %s and his age is %d! he paid Rs. %.4f \/-" % ('Arun', 28, 256.2932384 )
+```
+```print "His name is {} and his age is {}! he paid Rs. {} \/-".format('Arun', 28, 256.2932384 )
+```
+```name, age, donation = 'Arjun' , 30, 295.234423
+```
+```print "His name is {} and his age is {}! he paid Rs. {} \/-".format( name, age, donation )
+```
 
-print "His name is {} and his age is {}! he paid Rs. {} \/-".format('Arun', 28, 256.2932384 )
+```print "His name is {name} and his age is {age}! he paid Rs. {donation} \/-".format( name, age, donation )
+```
+```print "His name is {0} and his age is {2}! he paid Rs. {1} \/-".format( name,  donation, age )
+```
 
-name, age, donation = 'Arjun' , 30, 295.234423
-
-print "His name is {} and his age is {}! he paid Rs. {} \/-".format( name, age, donation )
-
-print "His name is {name} and his age is {age}! he paid Rs. {donation} \/-".format( name, age, donation )
-print "His name is {0} and his age is {2}! he paid Rs. {1} \/-".format( name,  donation, age )
-
-data_set = {'name':name, 'age': age, 'payment':donation}
-print "His name is {0['name']} and his age is {0['age']}! he paid Rs. {0['payment']} \/-".format( data_set )
+```data_set = {'name':name, 'age': age, 'payment':donation}
+```
+```print "His name is {0['name']} and his age is {0['age']}! he paid Rs. {0['payment']} \/-".format( data_set )
+```
 
 
 
@@ -91,72 +118,70 @@ print "His name is {0['name']} and his age is {0['age']}! he paid Rs. {0['paymen
 
 > *Program 1*
 
-print('Enter limit?')
-input_data = input()
+```print()
+input_data = input('Enter Limit? ')
 try:
-    size_of_array = int(input_data )
+    size_of_array = int(input_data)
     array = []
 except Exception as e:
     print "Failed to convert data! {e} ".format(e)
     sys.exit(9)
-for _ in range(0, size_of_array):
+
+for _ in range(size_of_array):
     array.append(input())
 print "-"*20
 print "\n => ".join(array)
+```
 
-    
 > *Program 2*
 
-a = " 1 + ( 3 % 2 ) "           # note that its a string
+```a = " 1 + ( 3 % 2 ) "           # note that its a string
 print type(a)
 print eval(a)
+```
 
-b = " ( 1 or ( 0 and 1 ) or 0 or (1 and 1)) "
+```b = " ( 1 or ( 0 and 1 ) or 0 or (1 and 1)) "
 print type(b)
 print eval(b)
-
+```
 > *VERY SIMPLEST EVER CALCULATOR is using USING PYTHON! [in one line]*
 print eval( input() )
 
 
 ##### PYTHON RESERVED WORDS
-and 	        | Boolean And Operation
-assert 	        | For testing Purpose
-break 	        | to break a control flow from if condition or loop
-class 	        | defining a class
-continue        | stop current iteration of loop and skip iteration
-def 	        | defining a function
-del 	        | delete an object
-elif 	        | else if condition: tag 
-else 	        | else condition tag
-except          | try catch block tag
-exec 	        | execute ython script or file
-finally 	    | try catch tag
-for             | loop tag	
-from 	        | tag to import files or packages
-global          | declare variables as global
-if 	            | if tag
-import 	        | tag to import files or packages
-in 	            | check weather an object is in a list or set
-is 	            | check weather the id's are same?
-lambda          | declare an inline function
-not 	        | negate anything
-or 	            | logiucal or
-pass 	        | leave an empty block as it is
-print 	        | print to starnderd output or file
-raise           | call an exception
-return 	        | return control flow to caller
-try 	        | try cache tag
-while           | looping tag
-
-
-
-
+* and 	          | Boolean And Operation
+* assert 	        | For testing Purpose
+* break 	        | to break a control flow from if condition or loop
+* class 	        | defining a class
+* continue        | stop current iteration of loop and skip iteration
+* def 	          | defining a function
+* del 	          | delete an object
+* elif 	          | else if condition: tag
+* else 	          | else condition tag
+* except          | try catch block tag
+* exec 	          | execute ython script or file
+* finally 	      | try catch tag
+* for             | loop tag
+* from 	          | tag to import files or packages
+* global          | declare variables as global
+* if 	            | if tag
+* import 	        | tag to import files or packages
+* in 	            | check weather an object is in a list or set
+* is 	            | check weather the id's are same?
+* lambda          | declare an inline function
+* not 	          | negate anything
+* or 	            | logiucal or
+* pass 	          | leave an empty block as it is
+* print 	        | print to starnderd output or file
+* raise           | call an exception
+* return 	        | return control flow to caller
+* try 	          | try cache tag
+* while           | looping tag
 
 
 
 ###### LIST
-mylist = ['a','f','e','Shamly','Manu', 34, -21, False, None, 3.14]
+```mylist = ['a','f','e','Shamly','Manu', 34, -21, False, None, 3.14]
 
 mylist[5]
 mylist[-2]
@@ -184,22 +209,33 @@ mylist = [(634, True), None, ['hello','', None, 'world'], {}]
 mylist[1][1][0]
 mylist[-2]
 mylist[5:-2]
+```
 
+```stack = [3, 4, 5]
+stack.append(6)
+stack.append(7)
+stack
+stack.pop()
+stack
+stack.pop()
+stack.pop()
+stack
+```
 
 ###### TOUPLE
-mytouple = ('abc', 123, 0, None)
+```mytouple = ('abc', 123, 0, None)
 mytouple[-2]
 mytouple[2:-2]
 
 mytouple =  123, None, True, "ABCDEF"
 mytouple[-2]
 mytouple[2:-2]
-
+```
 
 
 
 ###### SET
-myset = set('abc', 123, 0, None)
+```myset = set('abc', 123, 0, None)
 myset_dup  = set('abcd', 123, 425, "Hello World")
 
 print myset
@@ -210,11 +246,11 @@ print myset
 myset.union(myset_dup)
 myset.intersection(myset_dup)
 myset.diff(myset_dup)
-
+```
 
 
 ###### DICT
-mydict = {
+```mydict = {
     'name'      : 'Johny',
     'class'     : 'LKG B',
     'roll no'   : 2,
@@ -228,15 +264,11 @@ mydict = {
 }
 
 print mydict
-
-myset.union(myset_dup)
-myset.intersection(myset_dup)
-myset.diff(myset_dup)
-
-
+```
+### If feels interesting; check out, an immutable object inside mutable object or vice versa are modfyable
 
 ###### STRING
-a = "Hello" + " " + "World!" + " " + " The crazzy fox " + "quicklly jumped over " + " llazy Dogs! " 
+a = "Hello" + " " + "World!" + " " + " The crazzy fox " + "quicklly jumped over " + " llazy Dogs! "
 print(a)
 "wor" in a
 "acb" not in a
@@ -248,7 +280,7 @@ a[5:-2]
 a[1:-1:2]
 
 print a.capitialise()
-print a.center(50,'-') 
+print a.center(50,'-')
 print a.find("ll")
 print a.index('z')
 print a.isalnum()
@@ -282,7 +314,7 @@ def sum(x,y)
 
 def fahrenheit(T):
     return ((float(9)/5)*T + 32)
-    
+
 temperatures = (36.5, 37, 37.5, 38, 39)
 F = map(fahrenheit, temperatures)
 
@@ -301,4 +333,4 @@ internal_marks = (10,25,36,20,42)
 external_marks = (19,23,72,94,68)
 extra_marks = (2,5,4,3,3)
 
-passed = filter(lambda x, y, z : (x + y + z) > 45, internal_marks, external_marks, extra_marks ) 
+passed = filter(lambda x, y, z : (x + y + z) > 45, internal_marks, external_marks, extra_marks )
