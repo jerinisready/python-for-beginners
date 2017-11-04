@@ -24,7 +24,7 @@
 
 ## PRE - REUESTS
 Prefered OS : UBUNTU 16.04
-* PYTHON 2.7 (Installed!)
+* PYTHON 2.7.9 (Installed!)
 * PIP (Installed!)
 * Virtualenv (Installed!)
 * a Good easy to handle TextEditor for Python  [ Atom, Sublime, Notepad++ ,...]

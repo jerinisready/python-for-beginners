@@ -4,7 +4,7 @@ import re
 
 def head():
 	return """HTTP/1.0 200 OK
-		Content-Type: text/html 
+		Content-Type: text/html
 
 		"""
 
@@ -42,17 +42,11 @@ if __name__ == '__main__':
 	    print req
 	    # Look in the first line of the request for a move command
 	    # A move command should be e.g. 'http://server/move?a=90'
-	    match = re.match('GET /\?id=(\w+)\sHTTP/1', req)
+	    match = re.match('GET /\?id=([\w]+)\sHTTP/1', req)
 	    if match:
-		angle = match.group(1)
-		print "ANGLE: " + angle + ""
+		id_from_url = match.group(1)
 		csock.sendall(head()+template())
 	    else:
-
-		print "Returning 404"
-		csock.sendall("HTTP/1.0 404 Not Found\r\n\n 404 Page Not Found!")
+			print "Returning 404"
+		csock.sendall("HTTP/1.0 404 Not Found\r\n\n <h1>404 Page Not Found!</h1>")
 	    csock.close()
-
-
-
-
