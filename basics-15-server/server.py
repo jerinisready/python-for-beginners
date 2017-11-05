@@ -36,17 +36,18 @@ if __name__ == '__main__':
 
 	# Loop forever, listening for requests:
 	while True:
-	    csock, caddr = sock.accept()
-	    print "Connection from: " + `caddr`
-	    req = csock.recv(1024) # get the request, 1kB max
-	    print req
+		csock, caddr = sock.accept()
+		print "Connection from: " + `caddr`
+		req = csock.recv(1024) # get the request, 1kB max
+		print req
 	    # Look in the first line of the request for a move command
 	    # A move command should be e.g. 'http://server/move?a=90'
-	    match = re.match('GET /\?id=([\w]+)\sHTTP/1', req)
-	    if match:
-		id_from_url = match.group(1)
-		csock.sendall(head()+template())
-	    else:
+		match = re.match('GET /\?id=([\w]+)\sHTTP/1', req)
+		if match:
+			id_from_url = match.group(1)
+			csock.sendall(head()+template())
+			csock.close()
+		else:
 			print "Returning 404"
-		csock.sendall("HTTP/1.0 404 Not Found\r\n\n <h1>404 Page Not Found!</h1>")
-	    csock.close()
+			csock.sendall("HTTP/1.0 404 Not Found\r\n\n <h1>404 Page Not Found!</h1>")
+			csock.close()

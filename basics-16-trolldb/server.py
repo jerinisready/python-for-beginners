@@ -4,11 +4,25 @@ import re
 
 def head():
 	return """HTTP/1.0 200 OK
-		Content-Type: text/html 
+		Content-Type: text/html
 
 		"""
 
-def template():
+def template(angle):
+	body = ""
+	with ('base.html', 'r') as base :
+		body += base
+
+	template = ""
+	with ('template.html', 'r') as tmp :
+		template += tmp
+
+	comments = ""
+	with ('comment.html', 'r') as cmt :
+		comments += cmt
+
+
+
 	return 	"""
 		<!DOCTYPE html>
  		   <head>
@@ -22,11 +36,19 @@ def template():
 		"""
 
 def fb_json(fb_id):
+	# TRY TEMPLATE FUNCTIONS WORKING
 	pass
 
 # ##############################################################
 
 if __name__ == '__main__':
+	main()
+
+def sub():
+	pass
+
+
+def main():
 	# Standard socket stuff:
 	host = 'localhost' # do we need socket.gethostname() ?
 	port = 8085
@@ -36,23 +58,23 @@ if __name__ == '__main__':
 
 	# Loop forever, listening for requests:
 	while True:
-	    csock, caddr = sock.accept()
-	    print "Connection from: " + `caddr`
-	    req = csock.recv(1024) # get the request, 1kB max
-	    print req
-	    # Look in the first line of the request for a move command
-	    # A move command should be e.g. 'http://server/move?a=90'
-	    match = re.match('GET /\?id=(\w+)\sHTTP/1', req)
-	    if match:
-		angle = match.group(1)
-		print "ANGLE: " + angle + ""
-		csock.sendall(head()+template())
-	    else:
+		print "Waiting....."
+		csock, caddr = sock.accept()
+		print "Connection from: " + `caddr`
+		req = csock.recv(1024) # get the request, 1kB max
+		print req
 
-		print "Returning 404"
-		csock.sendall("HTTP/1.0 404 Not Found\r\n\n 404 Page Not Found!")
-	    csock.close()
-
-
-
-
+		match = re.match('GET /\?id=([-\.\w\d]+)\sHTTP/1', req)
+		# match = req.split('=')[1].split('\s')[0]
+		if match:
+			angle = match.group(1)
+			print "id =: " + angle + ""
+			op = head()+template(angle)
+			print "Senting"
+			csock.sendall(op)
+			print "Send!"
+			csock.close()
+		else:
+			print "Returning 404"
+			csock.sendall("HTTP/1.0 404 Not Found\r\n\n 404 Page Not Found!")
+    		csock.close()
