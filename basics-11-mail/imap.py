@@ -1,6 +1,6 @@
 import imaplib
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
-mail.login('jerinisready@gmail.com', r'" /3uc@lyptu5/ "')
+mail.login('jerin-is-ready[at]gmail[dot]com', r'- - - - - - - - - - -')
 mail.list()
 # Out: list of "folders" aka labels in gmail.
 mail.select("inbox") # connect to inbox.

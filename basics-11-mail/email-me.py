@@ -1,8 +1,8 @@
 #!/usr/bin/python
 import smtplib
 
-sender = 'jerinisready@gmail.com'
-password = r'" /3uc@lyptu5/ "'
+sender = 'jerin-is-ready[at]gmail[dot]com'
+password = r'--------------'
 receivers = [sender,]
 
 message = """From: PYTHONCEK HANDS-ON WORKSHOP <%s>
