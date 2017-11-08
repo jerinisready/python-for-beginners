@@ -1,42 +1,48 @@
 {
-	u'from': {u'name': u'International Chalu Union - ICU', u'id': u'632474226810626'},
-	u'shares': {u'count': 4},
-	u'link': u'https://www.facebook.com/InternationalChaluUnion/photos/a.781016535289727.1073741829.632474226810626/1676646059060099/?type=3',
-	u'comments': {
-		u'data': [
-			{
-				 u'created_time': u'2017-11-03T13:29:00+0000',
-				 u'message': u'\u0d07\u0d28\u0d4d\u0d28\u0d32\u0d46 \u0d2e\u0d3e\u0d1c\u0d3f\u0d15\u0d4d \u0d0e\u0d28\u0d4d\u0d28\u0d41\u0d02 \u0d2a\u0d31\u0d1e\u0d4d\u0d1e\u0d41 \u0d2b\u0d39\u0d26\u0d3f\u0d15\u0d4d\u0d15\u0d2f\u0d46 \u0d2e\u0d42\u0d1e\u0d4d\u0d1a\u0d3f\u0d1a\u0d4d\u0d1a\u0d24\u0d32\u0d4d\u0d32\u0d47... \u0d07\u0d28\u0d4d\u0d28\u0d3f\u0d28\u0d3f \u0d21\u0d3f.\u0d15\u0d4d\u0d2f\u0d41 \u0d06\u0d2f\u0d3f\u0d15\u0d4d\u0d15\u0d4b\u0d1f\u0d4d\u0d1f\u0d46',
-				 u'from': {u'name': u'Rizwan Jalal Mubarak', u'id': u'767641143288976'},
-				 u'id': u'1676646089060096_1676648319059873'
-			},
-			{
-				u'created_time': u'2017-11-03T13:28:26+0000',
-				u'message': u'\u0d15\u0d3f\u0d1f\u0d41 \U0001f60d\U0001f60d\U0001f60d\U0001f60d',
-				u'from': {u'name': u'Jibumon Sebastian', u'id': u'766663923431001'},
-				u'id': u'1676646089060096_1676647889059916'},
-			{u'created_time': u'2017-11-03T13:26:52+0000',
-				u'message': u'',
-				u'from': {u'name': u'N Jibin', u'id': u'326096954526652'},
-				u'id': u'1676646089060096_1676646489060056'
-			},
-			{
-				u'created_time': u'2017-11-03T13:31:11+0000',
-				u'message': u'80k',
-				u'from': {u'name': u'\u0d36\u0d24\u0d2e\u0d28\u0d4d\u0d2f\u0d41 \u0d15\u0d46', u'id': u'318701531846617'},
-				u'id': u'1676646089060096_1676649835726388'
-			},
-			{
-				u'created_time': u'2017-11-03T13:28:33+0000',
-				u'message': u'\U0001f602\U0001f602\U0001f602\U0001f602',
-				u'from': {u'name': u'Fahmi Huwaidi Fahmi', u'id': u'466512796883683'},
-				u'id': u'1676646089060096_1676647942393244'
-			}
-			],
-	 	u'summary': {u'total_count': 7, u'can_comment': True, u'order': u'ranked'}
-	},
- 	u'created_time': u'2017-11-03T13:26:18+0000',
- 	u'message': u'\u0d07\u0d24\u0d4d\u0d30\u0d2f\u0d4d\u0d15\u0d4d\u0d15\u0d4d \u0d1a\u0d40\u0d2a\u0d4d\u0d2a\u0d4d \u0d06\u0d2f\u0d3f\u0d30\u0d41\u0d28\u0d4d\u0d28\u0d4b \u0d06\u0d7c\u0d1f\u0d4d\u0d1f\u0d3f\u0d38\u0d4d\u0d31\u0d4d\u0d31\u0d4d \u0d26\u0d3e\u0d38\u0d7b \n\n#icuchalu #plainjoke #movies\n\nCredits : Lijas Liyakkath\n\xa9ICU',
-	u'type': u'photo',
-	u'id': u'632474226810626_1676646089060096'
+    "from":{
+        "name":"BBC News English",
+        "id":"228306784290373"
+    },
+    "description":"The US leader\"s visit to the demilitarised zone between the two Koreas is dropped due to bad weather.",
+    "shares":{
+        "count":4
+    },
+    "link":"http://www.bbc.com/news/world-asia-41910167",
+    "comments":{
+        "paging":{
+            "cursors":{
+                "after":"MQZDZD",
+                "before":"MgZDZD"
+            }
+        },
+        "data":[
+            {
+                "created_time":"2017-11-08T04:28:25+0000",
+                "message":"Trump can\"t see even to the testicle of Kim",
+                "from":{
+                    "name":"Ehsanullah Yousofzai",
+                    "id":"299945480520136"
+                },
+                "id":"376922246095492_376922806095436"
+            },
+            {
+                "created_time":"2017-11-08T04:31:30+0000",
+                "message":"",
+                "from":{
+                    "name":"ThawZin Htoo",
+                    "id":"173694486545951"
+                },
+                "id":"376922246095492_376923426095374"
+            }
+        ],
+        "summary":{
+            "total_count":2,
+            "can_comment":false,
+            "order":"ranked"
+        }
+    },
+    "created_time":"2017-11-08T04:24:19+0000",
+    "message":"Donald Trump warns North Korea: \"Do not try us\"\n\nUS President Donald Trump has issued a stark warning to North Korea\"s leader Kim Jong-un in an address to South Korea\"s parliament.",
+    "type":"link",
+    "id":"228306784290373_376922246095492"
 }
