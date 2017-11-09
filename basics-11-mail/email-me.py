@@ -1,20 +1,34 @@
 #!/usr/bin/python
-
 import smtplib
 
-sender = 'from@fromdomain.com'
-receivers = ['topersorn1@todomain.com','topersorn2@todomain.com',]
+sender = 'jerin-is-ready[at]gmail[dot]com'
+password = r'--------------'
+receivers = [sender,]
 
-message = """From: From Person <%s>
-To: To Person <%s>
-Subject: SMTP e-mail test
+message = """From: PYTHONCEK HANDS-ON WORKSHOP <%s>
+To: AUDIANCE  PYTHONCEK HANDS-ON WORKSHOP [s] <%s>
+Subject: CEK PYTHON HANDS-ON WORKSHOP
 
-This is a test e-mail message.
-""" % (sender, '>, <'.join(receievers))
+THIS MUCH EASY TO SEND A MAIL!!
+""" % (sender, '>, <'.join(receivers))
+
+# WE HAVE TO GET CONNECTED TO A SERVER AND PORT
+# login into server
+# SET MODE SSL / TLS
+# SEND MAIL
+
 
 try:
-   smtpObj = smtplib.SMTP('localhost')
-   smtpObj.sendmail(sender, receivers, message)         
+   connection = smtplib.SMTP('smtp.gmail.com', 587)
+   connection.starttls()
+   connection.login(sender,password)
+   connection.sendmail(sender, receivers, message)
+   connection.quit()
    print "Successfully sent email"
-except SMTPException:
-   print "Error: unable to send email"
+except smtplib.SMTPException as e:
+   print "Error: unable to send email\n",e
+
+
+# WORRIED OF NOT SENDING FROM GMAIL ?
+# TURN ON ACCESS TO LESS SECURE APPS *TEMPORARLY*
+# https://myaccount.google.com/lesssecureapps?pli=1

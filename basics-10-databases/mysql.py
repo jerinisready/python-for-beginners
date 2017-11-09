@@ -1,9 +1,8 @@
 #!/usr/bin/python
-
 import MySQLdb
 
 # Open database connection
-db = MySQLdb.connect("localhost","testuser","test123","TESTDB" )
+db = MySQLdb.connect("localhost", "root", "root", "TESTDB")
 
 # prepare a cursor object using cursor() method
 cursor = db.cursor()
@@ -14,36 +13,36 @@ cursor.execute(sql)
 data = cursor.fetchone()
 print "Database version : %s " % data
 
-
-
-### CREATE TABLE EXAMPLE ###
-
-#sql = "DROP TABLE IF EXISTS EMPLOYEE"
-#cursor.execute(sql)
-#data = cursor.fetchone()
-
-
-#sql = """CREATE TABLE EMPLOYEE (
+#
+#
+# ## CREATE TABLE EXAMPLE ###
+#
+# sql = "DROP TABLE IF EXISTS EMPLOYEE"
+# cursor.execute(sql)
+# data = cursor.fetchone()
+#
+#
+# sql = """CREATE TABLE EMPLOYEE (
 #         FIRST_NAME  CHAR(20) NOT NULL,
 #         LAST_NAME  CHAR(20),
-#         AGE INT,  
+#         AGE INT,
 #         SEX CHAR(1),
 #         INCOME FLOAT )"""
-#cursor.execute(sql)
-#data = cursor.fetchone()
-
-
-### DATA INSERT EXAMPLE ###
-
-#sql = """INSERT INTO EMPLOYEE(FIRST_NAME,
+# cursor.execute(sql)
+# data = cursor.fetchone()
+# print(data)
+#
+# ### DATA INSERT EXAMPLE ###
+#
+# sql = """INSERT INTO EMPLOYEE(FIRST_NAME,
 #         LAST_NAME, AGE, SEX, INCOME)
 #         VALUES ('Mac', 'Mohan', 20, 'M', 2000)"""
-#try:
+# try:
 #   # Execute the SQL command
 #   cursor.execute(sql)
 #   # Commit your changes in the database
 #   db.commit()
-#except:
+# except:
 #   # Rollback in case there is any error
 #   db.rollback()
 
